@@ -78,7 +78,7 @@ def detect_single(image):
             landmark_stable = np.array(landmark_stable).flatten()
             landmarks[0] = landmark_stable
 
-    print('bboxes_decoded', bboxes_decoded, 'scores', scores, 'mesh_landmark_inverse', mesh_landmark_inverse)
+    print('bboxes_decoded', bboxes_decoded, 'scores', scores)
     
     # draw
     image_show = draw_face(padded, bboxes_decoded, landmarks, scores, confidence=True)
@@ -103,6 +103,8 @@ while True:
 
     # put fps
     image_show = put_fps(image_show, 1 / (time.time() - start))
+    print('fps', 1 / (time.time() - start))
+    
     result = cv2.cvtColor(image_show, cv2.COLOR_RGB2BGR)
 
     # cv2.imshow('demo', result)
