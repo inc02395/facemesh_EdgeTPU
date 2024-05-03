@@ -43,8 +43,8 @@ def draw_mesh(image, landmarks, offsets=(0, 0), contour=False):
 
     if contour:
         for connection in FACE_CONNECTIONS:
-            landmark_1 = landmarks[connection[0]]
-            landmark_2 = landmarks[connection[1]]
+            landmark_1 = [int(el) for el in landmarks[connection[0]]]
+            landmark_2 = [int(el) for el in landmarks[connection[1]]]
             cv2.line(image_ret, tuple(landmark_1[:2]), tuple(landmark_2[:2]), color=[0, 255, 0], thickness=1)
 
     return image_ret
