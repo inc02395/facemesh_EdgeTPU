@@ -103,7 +103,7 @@ while True:
     image_show = put_fps(image_show, 1 / (time.time() - start))
     result = cv2.cvtColor(image_show, cv2.COLOR_RGB2BGR)
 
-    cv2.imshow('demo', result)
+    # cv2.imshow('demo', result)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    # if cv2.waitKey(1) & 0xFF == ord('q'):
+    #     break
