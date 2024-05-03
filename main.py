@@ -78,7 +78,7 @@ def detect_single(image):
             landmark_stable = np.array(landmark_stable).flatten()
             landmarks[0] = landmark_stable
 
-    print('bboxes_decoded', bboxes_decoded, 'scores', scores)
+    print('bboxes_decoded', bboxes_decoded, 'scores', scores, 'mesh_landmark_inverse', mesh_landmark_inverse)
     
     # draw
     image_show = draw_face(padded, bboxes_decoded, landmarks, scores, confidence=True)
